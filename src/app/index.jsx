@@ -1,35 +1,22 @@
-import { StyleSheet, Text, View,StatusBar} from "react-native";
+import { StyleSheet, Text, View,StatusBar, Button,Alert} from "react-native";
 
 export default function Page() {
+  const hello = () => {
+    Alert.alert("You can't stop the timer")
+  }
   return (
-    <View style={styles.container}>
+
+    <View className="">
       <StatusBar />
-      <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+      <View className="ml-2 ">
+        <View className="grid grid-cols-5">
+      <Button className="grid col-start-5 thumb-rose-800" onPress={hello} color="#841584" title="Hello"/>
+      </View>
+      
+        <Text className="text-5xl font-bold" >Hello World</Text>
+        <Text>This is the first page of your app.</Text>
       </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
-  },
-});
