@@ -29,7 +29,6 @@ const Challenge = mongoose.model("Challenge", challengeSchema);
 app.get('/challenges/trending', async (req, res) => {
   try {
     const challenges = await Challenge.find();
-    console.log(challenges);
     res.json(challenges);  
   } catch (error) {
     console.log("Error occurred: ", error);

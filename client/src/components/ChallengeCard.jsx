@@ -1,4 +1,4 @@
-import {View,FlatList,Text,Image, ScrollView} from 'react-native'
+import {View,FlatList,Text,Image, ScrollView,} from 'react-native'
 import { useState,useEffect } from 'react'
 import TrendingCard from '../components/TrendingCard'
 
@@ -22,6 +22,7 @@ const ChallengeCard = () => {
 
         }
     };
+    
 
     useEffect(()=>{
         featchTrendingChallenge();
@@ -36,15 +37,18 @@ const ChallengeCard = () => {
         )
     }
 
+
     return (
         <ScrollView className="flex-1" >
-            <View className="flex-1">
+            <View className="flex-1 ">
             {trendingChallenge.map((challenge,index)=>(
             <TrendingCard key={index}
             challengeName={challenge.challengeName} 
             description={challenge.description}
-            img={challenge.img}/>
+            img={challenge.img}
+            id={challenge.id}/>
           ))}
+           
             
 
             </View>

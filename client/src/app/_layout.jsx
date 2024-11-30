@@ -1,12 +1,20 @@
-import {Stack} from 'expo-router'
-import "../../global.css"
+import { Stack } from "expo-router";
+import "../../global.css";
 
-export default function RootLayout(){
-    return(
-     <Stack className="">
-        <Stack.Screen name="index" options={{title:'12 Hours Hussle'}}  / >
-        
+export default function RootLayout() {
+  return (
+    <Stack>
+
+      <Stack.Screen
+        name="index"
+        options={{headerShown:false}}
+      />
+
+      <Stack.Screen name="challenge/[id]" options={{headerShown:false,animation:'slide_from_bottom'}}/>
+
+
+
+      
     </Stack>
-    );
-
+  );
 }
