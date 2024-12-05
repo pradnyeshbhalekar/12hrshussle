@@ -16,6 +16,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.pradnyesshhh.x12hrshussle"
+      
     },
     "android": {
       "adaptiveIcon": {
