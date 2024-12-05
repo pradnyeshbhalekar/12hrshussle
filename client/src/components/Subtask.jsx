@@ -11,8 +11,8 @@ const Subtask = () => {
 
     
     return(
-        <View className="p-5 bg-darkMode ">
-         <View className="flex flex-row mt-16">
+        <View className=" p-5 bg-darkMode ">
+         <View className=" flex-row mt-16">
 
 <View className="flex flex-row items-center mb-5">
                 <Pressable onPress={()=>{router.goBack()}} className="mr-3">
