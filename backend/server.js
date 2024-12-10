@@ -8,7 +8,7 @@ const PORT = 5000;
 app.use(express.json());
 
 
-const mongoURL = process.env.mongoURL
+const mongoURL = process.env.MongoURL
 
 
 
