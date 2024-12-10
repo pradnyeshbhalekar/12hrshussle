@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -6,7 +8,7 @@ const PORT = 5000;
 app.use(express.json());
 
 
-const mongoURL = "mongodb+srv://pradnyeshbhalekar78:UgFN3gDSzAXL55Ii@aws-mum-01.kns6f.mongodb.net/12hrshussle?retryWrites=true&w=majority&appName=aws-mum-01";
+const mongoURL = process.env.mongoURL
 
 
 
