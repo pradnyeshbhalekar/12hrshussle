@@ -10,7 +10,10 @@ app.use(express.json());
 
 const mongoURL = process.env.MongoURL
 
-
+if (!mongoURL) {
+  console.error("MongoURL is not defined in the environment variables");
+  process.exit(1);  // Exit the application with an error code
+}
 
 mongoose
   .connect(mongoURL)
